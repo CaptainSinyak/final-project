@@ -13,7 +13,7 @@ export default function pokemonReducer(state = initialState, action) {
     case GET_POKEMONS:
       return {
         ...state,
-        pokemons: action.payload.pokemons
+        pokemons: action.payload
       }
     default:
       return state;
@@ -24,3 +24,4 @@ export const getPokemons = (pokemonList) => ({
   type: GET_POKEMONS,
   payload: pokemonList
 })
+

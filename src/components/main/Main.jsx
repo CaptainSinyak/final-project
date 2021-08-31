@@ -6,9 +6,9 @@ import PokemonCard from './PokemonCard/PokemonCard';
 
 const Main = () => {
   const dispatch = useDispatch()
-  const pokemons = useSelector(state => state.pokemonsList)
+  const pokemons = useSelector(state => state.pokemonsList.pokemons)
   useEffect(() => {
-    dispatch(getPokemonsData(pokemons))  
+    dispatch(getPokemonsData())  
   }, [])
 
   // const store = useSelector(state => state)
